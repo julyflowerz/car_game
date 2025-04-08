@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart'; // <-- add this if not already
-import 'startScreen.dart'; // StartScreen will lead to your game
+import 'package:firebase_core/firebase_core.dart';
+import 'startScreen.dart'; // your custom start screen
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,11 +25,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Car Game',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: const StartScreen(), // Or HomePage if that’s your entry screen
+      home: const StartScreen(),
     );
   }
 }

@@ -32,3 +32,10 @@ flutter:
   assets:
     - assets/background.gif
     - assets/redcar.png
+    - assets/start.png
+    - assets/mountains.png
+  fonts:
+    - family: RaceFont
+      fonts:
+        - asset: assets/fonts/raceFont/SuperBrigade3D.otf
+        - asset: assets/fonts/raceFont/SuperBrigadeItalic.otf

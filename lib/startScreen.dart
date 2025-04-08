@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'GameScreen.dart'; // Import your new GameScreen
+import 'GameScreen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -10,34 +10,44 @@ class StartScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
+            // 🔹 Background
             Positioned.fill(
               child: Image.asset(
                 'assets/background.gif',
                 fit: BoxFit.cover,
               ),
             ),
-            Center(
+
+            // 🔺 Title + Start Button
+            Positioned(
+              top: 80,
+              left: 0,
+              right: 0,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text(
-                    "Car Game",
+                    "JDM CAR GAME!",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'RaceFont',
+                      fontSize: 50,
                       color: Colors.red,
+                      fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
-                          blurRadius: 10,
                           color: Colors.black,
                           offset: Offset(4, 4),
+                          blurRadius: 8,
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
+                  const SizedBox(height: 10),
+
+                  // ✅ Start Button as Image
+                  GestureDetector(
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -45,21 +55,11 @@ class StartScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 15),
-                      textStyle: const TextStyle(
-                        fontSize: 20,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        side: const BorderSide(color: Colors.red, width: 2),
-                      ),
-                    ),
-                    child: const Text(
-                      "Press Start!",
-                      style: TextStyle(color: Colors.white),
+                    child: Image.asset(
+                      'assets/start.png',
+                      width: 350,
+                      height: 100,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ],

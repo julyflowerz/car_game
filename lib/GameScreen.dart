@@ -7,10 +7,8 @@ class GameScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GameWidget(
-        game: CarGame(),
-      ),
+    return GameWidget(
+      game: CarGame(),
     );
   }
 }
