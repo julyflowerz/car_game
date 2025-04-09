@@ -6,7 +6,7 @@ class Car extends SpriteComponent with HasGameRef {
 
   @override
   Future<void> onLoad() async {
-    sprite = await gameRef.loadSprite('redcar.png'); // or your sprite asset
+    sprite = await gameRef.loadSprite('assets/redcar.png'); // or your sprite asset
     position = Vector2(100, gameRef.size.y - 80); // near bottom left
   }
 

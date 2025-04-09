@@ -6,7 +6,7 @@ class Road extends SpriteComponent with HasGameRef<FlameGame> {
 
   @override
   Future<void> onLoad() async {
-    sprite = await gameRef.loadSprite('mountains.png');
+    sprite = await gameRef.loadSprite('assets/mountains.png');
     position = Vector2(0, gameRef.size.y - 60); // bottom of screen
   }
 }
