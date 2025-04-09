@@ -1,3 +1,4 @@
+
 import 'package:flame/components.dart';
 
 class Car extends SpriteComponent with HasGameRef {
